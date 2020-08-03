@@ -1,0 +1,35 @@
+li[ui-sref]:hover {
+	cursor: pointer;
+	font-weight: bold;
+	border: 1px solid black;
+	margin-bottom: 3px;
+	margin-top: 3px;
+}
+
+#heading {
+	text-align: center;
+	border: 2px solid black;
+	font-style: oblique;
+	font-family: Algerian;
+	font-weight: bold;
+	margin-top: 100px;
+}
+
+body {
+	background-color: #FFDAB9;
+}
+
+.linkMenu {
+	color: blue;
+}
+
+.details {
+	font-weight: bold;
+	font-size: 2em;
+	margin-left: 40px;
+}
+
+.name {
+	font-weight: bold;
+	font-family: Arial;
+}
