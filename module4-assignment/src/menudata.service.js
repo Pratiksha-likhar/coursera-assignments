@@ -31,7 +31,6 @@ function MenuDataService($http) {
 		})
 		.then(function (result) {
 			items2 = result.data.menu_items;
-			console.log(items2);
 			return items2;
 		});
 
