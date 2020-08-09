@@ -1,0 +1,22 @@
+.signup {
+	text-align: center;
+}
+.form {
+	text-align: justify;
+	margin-left: 20px;
+	font-family: Arial;
+}
+.input {
+	color: black;
+	font-family: Oxygen sans-serif;
+}
+.warning {
+	font-size: 0.75em;
+	font-family: Georgia;
+}
+.registered {
+	font-family: Arial;
+	font-size: 1.5em;
+	text-align: center;
+	font-style: oblique;
+}

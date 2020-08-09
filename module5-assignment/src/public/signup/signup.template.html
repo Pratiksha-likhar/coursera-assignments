@@ -1,0 +1,59 @@
+<div class="signup">
+	<h2>Enter your Details</h2> <hr> 
+	<div class="form">
+		<form name="regForm" novalidate>
+
+		First Name: <br>
+		<input type="text" name="firstName" placeholder="Enter your first name" size="100" 
+		ng-model="reg.user.firstName" class="input" 
+		required
+		minlength="3"> <br>
+		<span class="warning" 
+			  ng-if="(regForm.firstName.$error.minlength ||
+					  regForm.firstName.$error.required) &&
+					  regForm.firstName.$touched">
+			*First Name must be atleast 3 characters long*
+		</span>  <br>
+
+		Last Name: <br> 
+		<input type="text" name="lastName" placeholder="Enter your last name" 
+		ng-model="reg.user.lastName" class="input"
+		required minlength="3" size="100"> <br>
+		<span class="warning" 
+			  ng-if="(regForm.lastName.$error.minlength ||
+					  regForm.lastName.$error.required) &&
+					  regForm.lastName.$touched">
+			*Last Name must be atleast 2 characters long*
+		</span><br>
+
+		Email: <br>
+		<input type="email" name="email" placeholder="Enter your email" ng-model="reg.user.email" class="input" required size="100"><br>
+		<span class="warning" ng-if="regForm.email.$invalid && regForm.email.$touched">
+			*Must be a valid email address: handle@domain format*
+		</span><br>
+
+		Phone: <br>
+		<input type="text" name="phone" placeholder="#####-#####" ng-model="reg.user.phone" required  
+		class="input" pattern="(\d{5})-(\d{5})" size="100">
+		<span class="warning" ng-if="regForm.phone.$invalid && regForm.phone.$touched"><br>
+			*Must be in the format #####-#####*
+		</span><br>
+		<br>
+		Favourite Menu Dish: <br>
+		<input type="text" name="favDish" placeholder="Write the number of your favourite dish"
+		ng-model="reg.user.favDish" required size="100" class="input"> <br> {{ reg.msg1 || reg.msg2 }}<br> <br>
+
+		<button ng-disabled="regForm.$invalid"
+				ng-click="reg.signup()"
+				style="color: black;">Sign Up!
+		</button> <br> <br> 
+
+		</form>
+
+		<div class="registered" ng-if="reg.msg1">
+			Your information has been saved!<br>
+			Go to My Info for details.
+		</div>
+	</div>
+</div>
+

@@ -1,0 +1,24 @@
+<div class="details1" ng-if="infoCtrl.name.length === 1"> <br>
+	Not signed up yet! Click on the below link to Sign Up. <br>
+	<a ui-sref="public.signup">Sign up now</a>
+</div>
+
+<div class="details" ng-if="infoCtrl.name.length > 1">
+<h3>User Info</h3> <hr>
+
+<div> 
+	<span class="info">Name</span>: {{ infoCtrl.name }} <br>
+	<span class="info">Email</span>: {{ infoCtrl.email }} <br>
+	<span class="info">Phone</span>: {{ infoCtrl.phone }} <br>
+</div>
+
+<br> <br>
+
+<h3>Favourite Menu Item</h3> <hr>
+<div>
+	<img ng-src="{{infoCtrl.basePath}}/images/{{infoCtrl.shortName}}.jpg" alt="{{infoCtrl.title}}"><br>
+	<span class="info">Title</span>: {{ infoCtrl.title }} <br>
+	<span class="info">Description</span>: {{ infoCtrl.description }}
+</div>
+
+</div>
